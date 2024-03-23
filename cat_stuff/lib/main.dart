@@ -90,14 +90,35 @@ class StackContainer extends StatelessWidget {
             ),
           ),
           Positioned(
+            top: MediaQuery.of(context).size.height * 0.25,
+            left: 350,
+            child: Container(
+              width: 250,
+              height: 874,
+              child: Text(
+                'At this moment is: Flutter Developer,\n'
+                'looking for work.',
+                textAlign: TextAlign.justify,
+                style: GoogleFonts.ubuntu(
+                    textStyle:
+                        const TextStyle(color: Color(0xFFD48C5C), fontSize: 25),
+                    fontWeight: FontWeight.w400),
+              ),
+            ),
+          ),
+          Positioned(
             top: MediaQuery.of(context).size.height * 0.45,
             left: 42,
-            child: Text(
-              kLongText,
-              textAlign: TextAlign.justify,
-              style: GoogleFonts.ubuntu(
+            child: Container(
+              width: 1000,
+              height: 874,
+              child: Text(
+                kLongText,
+                textAlign: TextAlign.justify,
+                style: GoogleFonts.ubuntu(
                   textStyle: const TextStyle(color: Colors.white, fontSize: 25),
-                  fontWeight: FontWeight.w400),
+                ),
+              ),
             ),
           ),
           Positioned(
@@ -118,7 +139,7 @@ class WhiteBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width * 2,
-      height: MediaQuery.of(context).size.height * 3,
+      height: MediaQuery.of(context).size.height * 2.5,
       child: Stack(
         children: [
           Container(
@@ -142,11 +163,10 @@ class WhiteBox extends StatelessWidget {
           Positioned(
             top: 140,
             left: 0,
-            child: SizedBox(
+            child: Container(
               width: 800,
               height: 874,
               child: Container(
-                decoration: BoxDecoration(),
                 child: SingleChildScrollView(
                   child: Padding(
                     padding: EdgeInsets.all(30.0),
@@ -170,7 +190,7 @@ class WhiteBox extends StatelessWidget {
           ),
           Positioned(
             top: 700,
-            left: 620,
+            left: MediaQuery.of(context).size.width * 0.6,
             child: SizedBox(
               width: 800,
               height: 300,
@@ -184,6 +204,49 @@ class WhiteBox extends StatelessWidget {
               ),
             ),
           ),
+          Positioned(
+            top: 1050,
+            left: MediaQuery.of(context).size.width * 0.55,
+            child: Container(
+              width: 600,
+              height: 500,
+              child: Text(
+                "Developing the frontend and server-side components, structuring the project's architecture, working with abstractions, legacy code, and complex architectures.",
+                style: GoogleFonts.ubuntu(
+                  textStyle: const TextStyle(color: Colors.black, fontSize: 25),
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 1300,
+            left: 30,
+            child: SizedBox(
+              width: 800,
+              height: 300,
+              child: Text(
+                "Two years in freelance",
+                style: GoogleFonts.ubuntu(
+                    textStyle:
+                        const TextStyle(color: Colors.black, fontSize: 100),
+                    fontWeight: FontWeight.w700),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 1600,
+            left: 30,
+            child: Container(
+              width: 600,
+              height: 500,
+              child: Text(
+                "As a freelancer, I specialize in frontend development, collaborating with clients to enhance their digital presence. This includes crafting intuitive user interfaces, optimizing website performance, and ensuring seamless integration of frontend components. Additionally, I have experience in structuring project architectures, handling legacy code, and tackling complex frontend challenges to deliver high-quality solutions to my clients.",
+                style: GoogleFonts.ubuntu(
+                  textStyle: const TextStyle(color: Colors.black, fontSize: 25),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -191,22 +254,4 @@ class WhiteBox extends StatelessWidget {
 }
 
 const String kLongText =
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n'
-    'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when\n'
-    'an unknown printer took a galley of type and scrambled it to make a type\n'
-    'specimen book. It has survived not only five centuries, but also the leap into \n'
-    'electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s \n'
-    'with the release of Letraset sheets containing Lorem Ipsum passages, and more \n'
-    'recently with desktop publishing software like Aldus PageMaker including versions \n'
-    'of Lorem Ipsum.';
-
-const TextStyle kTextStyle = TextStyle(
-  color: Colors.white,
-  fontFamily: 'Ubuntu',
-  fontSize: 25,
-);
-
-const TextStyle kHeaderTextStyle = TextStyle(
-  fontSize: 100,
-  color: Colors.white,
-);
+    "Hello! I'm Nastya, a dedicated Web Developer with a strong focus on Frontend development. While I'm still sharpening my skills in Backend development, I'm making significant progress each day. I take pride in being a full-stack developer, having personally crafted this site from scratch—from initial design concepts to backend implementation. Programming and development aren't just my profession; they're my passion. I thrive on the daily challenges they bring, constantly seeking opportunities to grow and improve. I'm excited to share more about my journey and projects with you. Let's connect and explore potential collaborations or simply exchange insights within the dynamic world of web development!";

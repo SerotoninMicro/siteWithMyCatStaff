@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height + 2000,
+                height: MediaQuery.of(context).size.height + 3000,
                 child: const StackContainer(),
               ),
             ],
@@ -83,9 +83,9 @@ class StackContainer extends StatelessWidget {
                 'Anastasia\n'
                 'Lebed',
                 style: GoogleFonts.ubuntu(
-                  textStyle:
-                      const TextStyle(color: Colors.white, fontSize: 100),
-                ),
+                    textStyle:
+                        const TextStyle(color: Colors.white, fontSize: 100),
+                    fontWeight: FontWeight.w700),
               ),
             ),
           ),
@@ -96,8 +96,8 @@ class StackContainer extends StatelessWidget {
               kLongText,
               textAlign: TextAlign.justify,
               style: GoogleFonts.ubuntu(
-                textStyle: const TextStyle(color: Colors.white, fontSize: 25),
-              ),
+                  textStyle: const TextStyle(color: Colors.white, fontSize: 25),
+                  fontWeight: FontWeight.w400),
             ),
           ),
           Positioned(
@@ -112,13 +112,13 @@ class StackContainer extends StatelessWidget {
 }
 
 class WhiteBox extends StatelessWidget {
-  const WhiteBox({super.key});
+  const WhiteBox({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width * 2,
-      height: MediaQuery.of(context).size.height * 2,
+      height: MediaQuery.of(context).size.height * 3,
       child: Stack(
         children: [
           Container(
@@ -133,9 +133,9 @@ class WhiteBox extends StatelessWidget {
               child: Text(
                 '  /coding',
                 style: GoogleFonts.ubuntu(
-                  textStyle:
-                      const TextStyle(color: Colors.black, fontSize: 100),
-                ),
+                    textStyle:
+                        const TextStyle(color: Colors.black, fontSize: 100),
+                    fontWeight: FontWeight.w700),
               ),
             ),
           ),
@@ -150,15 +150,37 @@ class WhiteBox extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Padding(
                     padding: EdgeInsets.all(30.0),
-                    child: Text(
-                      kLongText,
-                      style: GoogleFonts.ubuntu(
-                        textStyle:
-                            const TextStyle(color: Colors.black, fontSize: 25),
-                      ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          kLongText,
+                          style: GoogleFonts.ubuntu(
+                              textStyle: const TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w400)),
+                        ),
+                      ],
                     ),
                   ),
                 ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 700,
+            left: 620,
+            child: SizedBox(
+              width: 800,
+              height: 300,
+              child: Text(
+                '/nutcracker\n'
+                '    company',
+                style: GoogleFonts.ubuntu(
+                    textStyle:
+                        const TextStyle(color: Colors.black, fontSize: 100),
+                    fontWeight: FontWeight.w700),
               ),
             ),
           ),

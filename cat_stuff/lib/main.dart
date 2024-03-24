@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ionicons/ionicons.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +19,9 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _MyHomePageState createState() => _MyHomePageState();
 }
 
@@ -61,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class StackContainer extends StatelessWidget {
-  const StackContainer({super.key});
+  const StackContainer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -71,21 +72,51 @@ class StackContainer extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            top: MediaQuery.of(context).size.height *
-                0.05, // Adjusted based on proportion
-            left: 42, // Adjusted based on proportion
+            top: MediaQuery.of(context).size.height * 0.05,
+            left: 42,
             child: Container(
-              width: MediaQuery.of(context).size.width *
-                  0.7, // Adjusted based on proportion
+              width: MediaQuery.of(context).size.width * 0.7,
               decoration: BoxDecoration(border: Border.all()),
-
               child: Text(
                 'Anastasia\n'
                 'Lebed',
                 style: GoogleFonts.ubuntu(
-                    textStyle:
-                        const TextStyle(color: Colors.white, fontSize: 100),
-                    fontWeight: FontWeight.w700),
+                  textStyle:
+                      const TextStyle(color: Colors.white, fontSize: 100),
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 30,
+            left: MediaQuery.of(context).size.width * 0.8,
+            child: GestureDetector(
+              onTap: () {
+                launchUrl(Uri.parse(
+                    'https://github.com/SerotoninMicro/siteWithMyCatStaff'));
+              },
+              child: Container(
+                height: 90,
+                width: 90,
+                child: Icon(Ionicons.logo_github,
+                    color: Color(0xFFD48C5C), size: 90.0),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 30,
+            left: MediaQuery.of(context).size.width * 0.9,
+            child: GestureDetector(
+              onTap: () {
+                launchUrl(
+                    Uri.parse('https://www.linkedin.com/in/anastasialebed/'));
+              },
+              child: Container(
+                height: 90,
+                width: 90,
+                child: Icon(Ionicons.logo_linkedin,
+                    color: Colors.white, size: 90.0),
               ),
             ),
           ),
@@ -100,9 +131,10 @@ class StackContainer extends StatelessWidget {
                 'looking for work.',
                 textAlign: TextAlign.justify,
                 style: GoogleFonts.ubuntu(
-                    textStyle:
-                        const TextStyle(color: Color(0xFFD48C5C), fontSize: 25),
-                    fontWeight: FontWeight.w400),
+                  textStyle:
+                      const TextStyle(color: Color(0xFFD48C5C), fontSize: 25),
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
           ),
@@ -144,6 +176,22 @@ class WhiteBox extends StatelessWidget {
         children: [
           Container(
             color: Colors.white,
+          ),
+          Positioned(
+            top: 50,
+            left: MediaQuery.of(context).size.width * 0.3,
+            child: GestureDetector(
+              onTap: () {
+                launchUrl(Uri.parse(
+                    'https://drive.google.com/file/d/1J7gaNxbjnBbDn-vORJdY0-5Srd0ZhjGM/view?usp=sharing'));
+              },
+              child: Container(
+                height: 90,
+                width: 90,
+                child: const Icon(Ionicons.document,
+                    color: Colors.black, size: 90.0),
+              ),
+            ),
           ),
           Positioned(
             top: 25,

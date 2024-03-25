@@ -61,7 +61,7 @@ class WhiteBox extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          kLongText,
+                          kLongText2,
                           style: GoogleFonts.ubuntu(
                               textStyle: const TextStyle(
                                   color: Colors.black,
@@ -72,6 +72,21 @@ class WhiteBox extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: MediaQuery.of(context).size.width * 0.61,
+            left: MediaQuery.of(context).size.width * 0.6,
+            child: GestureDetector(
+              onTap: () {
+                launchUrl(Uri.parse('https://back.nutcracker.lab.upg/#/'));
+              },
+              child: Container(
+                height: 90,
+                width: 90,
+                child:
+                    const Icon(Ionicons.link, color: Colors.black, size: 90.0),
               ),
             ),
           ),
@@ -98,7 +113,7 @@ class WhiteBox extends StatelessWidget {
               width: 600,
               height: 500,
               child: Text(
-                "Developing the frontend and server-side components, structuring the project's architecture, working with abstractions, legacy code, and complex architectures.",
+                "Developing the frontend and server-side components, structuring the project's architecture, working with abstractions, and complex architectures. Spearheaded the development of responsive, user-friendly websites using the Flutter Framework, ensuring cross-platform compatibility and optimal performance. Collaborated closely with backend developers to integrate APIs and create seamless, full-stack solutions tailored to client needs. Contributed to the technology strategy, offering insights into frontend technologies that align with business goals to drive innovation and maintain competitive edge.",
                 style: GoogleFonts.ubuntu(
                   textStyle: const TextStyle(color: Colors.black, fontSize: 25),
                 ),
@@ -140,5 +155,7 @@ class WhiteBox extends StatelessWidget {
   }
 }
 
-const String kLongText =
-    "Hello! I'm Nastya, a dedicated Web Developer with a strong focus on Frontend development. While I'm still sharpening my skills in Backend development, I'm making significant progress each day. I take pride in being a full-stack developer, having personally crafted this site from scratch—from initial design concepts to backend implementation. Programming and development aren't just my profession; they're my passion. I thrive on the daily challenges they bring, constantly seeking opportunities to grow and improve. I'm excited to share more about my journey and projects with you. Let's connect and explore potential collaborations or simply exchange insights within the dynamic world of web development!";
+const String kLongText2 =
+    'My Hard Skills: Languages: Dart, JavaScript, TypeScript, Go, Python.\n'
+    'Technologies: Flutter, React.js,  jQuery, Bootstrap, Flask, ASP.NET, Node.js, Docker, Android SDK, iOS SDK, Dart SDK\n'
+    'Concepts: Compiler, Operating System, Virtual Memory, Cache Memory, Encryption, Decryption, Artificial Intelligence, Machine Learning, LLM, Neural Networks, API, Database Normalization, Agile Methodology, Cloud Computing.';

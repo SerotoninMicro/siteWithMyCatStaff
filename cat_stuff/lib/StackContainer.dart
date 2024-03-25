@@ -1,5 +1,6 @@
 import 'package:cat_stuff/WhiteBox.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -29,6 +30,24 @@ class StackContainer extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
+            ),
+          ),
+          Positioned(
+            top: MediaQuery.of(context).size.width * 0.3,
+            left: MediaQuery.of(context).size.width * 0.4,
+            child: Container(
+              height: 900,
+              width: 900,
+              child: Image(image: AssetImage('lib/icons/cat.png')),
+            ),
+          ),
+          Positioned(
+            top: MediaQuery.of(context).size.width * 0.5,
+            left: 40,
+            child: Container(
+              height: 90,
+              width: 90,
+              child: Image(image: AssetImage('lib/icons/pfp.png')),
             ),
           ),
           Positioned(
@@ -106,3 +125,6 @@ class StackContainer extends StatelessWidget {
     );
   }
 }
+
+const String kLongText =
+    "Hello! I'm Nastya, a dedicated Web Developer with a strong focus on Frontend development. While I'm still sharpening my skills in Backend development, I'm making significant progress each day. I take pride in being a full-stack developer, having personally crafted this site from scratch—from initial design concepts to backend implementation. Programming and development aren't just my profession; they're my passion. I thrive on the daily challenges they bring, constantly seeking opportunities to grow and improve. I'm excited to share more about my journey and projects with you. Let's connect and explore potential collaborations or simply exchange insights within the dynamic world of web development!";

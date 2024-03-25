@@ -18,7 +18,7 @@ class WhiteBox extends StatelessWidget {
           ),
           Positioned(
             top: 50,
-            left: MediaQuery.of(context).size.width * 0.3,
+            left: MediaQuery.of(context).size.width * 0.33,
             child: GestureDetector(
               onTap: () {
                 launchUrl(Uri.parse(
@@ -36,7 +36,7 @@ class WhiteBox extends StatelessWidget {
             top: 25,
             left: 5,
             child: SizedBox(
-              width: 622,
+              width: 500,
               height: 127,
               child: Text(
                 '  /coding',
@@ -76,8 +76,8 @@ class WhiteBox extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.width * 0.61,
-            left: MediaQuery.of(context).size.width * 0.6,
+            top: MediaQuery.of(context).size.width * 0.51,
+            left: MediaQuery.of(context).size.width * 0.53,
             child: GestureDetector(
               onTap: () {
                 launchUrl(Uri.parse('https://back.nutcracker.lab.upg/#/'));
@@ -149,13 +149,42 @@ class WhiteBox extends StatelessWidget {
               ),
             ),
           ),
+          Positioned(
+            top: 1900,
+            left: 30,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              child: HackerSpaces(),
+            ),
+          ),
         ],
       ),
     );
   }
 }
 
+class HackerSpaces extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      top: 10,
+      left: 10,
+      child: Container(
+        width: 600,
+        height: 500,
+        child: Text(
+          "Innovative projects at XYZ Corp",
+          style: GoogleFonts.ubuntu(
+            textStyle: const TextStyle(color: Colors.white, fontSize: 100),
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 const String kLongText2 =
-    'My Hard Skills: Languages: Dart, JavaScript, TypeScript, Go, Python.\n'
+    '/my hard skills: Languages: Dart, JavaScript, TypeScript, Go, Python.\n'
     'Technologies: Flutter, React.js,  jQuery, Bootstrap, Flask, ASP.NET, Node.js, Docker, Android SDK, iOS SDK, Dart SDK\n'
     'Concepts: Compiler, Operating System, Virtual Memory, Cache Memory, Encryption, Decryption, Artificial Intelligence, Machine Learning, LLM, Neural Networks, API, Database Normalization, Agile Methodology, Cloud Computing.';

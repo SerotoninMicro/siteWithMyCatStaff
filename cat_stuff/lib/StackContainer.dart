@@ -5,7 +5,7 @@ import 'package:ionicons/ionicons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class StackContainer extends StatelessWidget {
-  const StackContainer({Key? key}) : super(key: key);
+  const StackContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class StackContainer extends StatelessWidget {
             child: Container(
               height: 900,
               width: 900,
-              child: Image(image: AssetImage('lib/icons/cat.png')),
+              child: const Image(image: AssetImage('lib/icons/cat.png')),
             ),
           ),
           Positioned(
@@ -46,7 +46,7 @@ class StackContainer extends StatelessWidget {
             child: Container(
               height: 90,
               width: 90,
-              child: Image(image: AssetImage('lib/icons/pfp.png')),
+              child: const Image(image: AssetImage('lib/icons/pfp.png')),
             ),
           ),
           Positioned(
@@ -60,7 +60,7 @@ class StackContainer extends StatelessWidget {
               child: Container(
                 height: 90,
                 width: 90,
-                child: Icon(Ionicons.logo_github,
+                child: const Icon(Ionicons.logo_github,
                     color: Color(0xFFD48C5C), size: 90.0),
               ),
             ),
@@ -76,7 +76,7 @@ class StackContainer extends StatelessWidget {
               child: Container(
                 height: 90,
                 width: 90,
-                child: Icon(Ionicons.logo_linkedin,
+                child: const Icon(Ionicons.logo_linkedin,
                     color: Colors.white, size: 90.0),
               ),
             ),

@@ -186,5 +186,5 @@ class HackerSpaces extends StatelessWidget {
 
 const String kLongText2 =
     '/my hard skills: Languages: Dart, JavaScript, TypeScript, Go, Python.\n'
-    'Technologies: Flutter, React.js,  jQuery, Bootstrap, Flask, ASP.NET, Node.js, Docker, Android SDK, iOS SDK, Dart SDK\n'
+    'Technologies: Git, Flutter, React.js,  jQuery, Bootstrap, Flask, ASP.NET, Node.js, Docker, Android SDK, iOS SDK, Dart SDK\n'
     'Concepts: Compiler, Operating System, Virtual Memory, Cache Memory, Encryption, Decryption, Artificial Intelligence, Machine Learning, LLM, Neural Networks, API, Database Normalization, Agile Methodology, Cloud Computing.';

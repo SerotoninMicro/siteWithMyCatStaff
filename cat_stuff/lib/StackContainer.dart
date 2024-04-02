@@ -34,19 +34,19 @@ class StackContainer extends StatelessWidget {
           Positioned(
             top: MediaQuery.of(context).size.width * 0.3,
             left: MediaQuery.of(context).size.width * 0.4,
-            child: Container(
+            child: const SizedBox(
               height: 900,
               width: 900,
-              child: const Image(image: AssetImage('lib/icons/cat.png')),
+              child: Image(image: AssetImage('lib/icons/cat.png')),
             ),
           ),
           Positioned(
             top: MediaQuery.of(context).size.width * 0.5,
             left: 40,
-            child: Container(
+            child: const SizedBox(
               height: 90,
               width: 90,
-              child: const Image(image: AssetImage('lib/icons/pfp.png')),
+              child: Image(image: AssetImage('lib/icons/pfp.png')),
             ),
           ),
           Positioned(
@@ -57,10 +57,10 @@ class StackContainer extends StatelessWidget {
                 launchUrl(Uri.parse(
                     'https://github.com/SerotoninMicro/siteWithMyCatStaff'));
               },
-              child: Container(
+              child: const SizedBox(
                 height: 90,
                 width: 90,
-                child: const Icon(Ionicons.logo_github,
+                child: Icon(Ionicons.logo_github,
                     color: Color(0xFFD48C5C), size: 90.0),
               ),
             ),
@@ -73,10 +73,10 @@ class StackContainer extends StatelessWidget {
                 launchUrl(
                     Uri.parse('https://www.linkedin.com/in/anastasialebed/'));
               },
-              child: Container(
+              child: const SizedBox(
                 height: 90,
                 width: 90,
-                child: const Icon(Ionicons.logo_linkedin,
+                child: Icon(Ionicons.logo_linkedin,
                     color: Colors.white, size: 90.0),
               ),
             ),
@@ -84,7 +84,7 @@ class StackContainer extends StatelessWidget {
           Positioned(
             top: MediaQuery.of(context).size.height * 0.25,
             left: 350,
-            child: Container(
+            child: SizedBox(
               width: 250,
               height: 874,
               child: Text(
@@ -102,7 +102,7 @@ class StackContainer extends StatelessWidget {
           Positioned(
             top: MediaQuery.of(context).size.height * 0.45,
             left: 42,
-            child: Container(
+            child: SizedBox(
               width: 1000,
               height: 874,
               child: Text(

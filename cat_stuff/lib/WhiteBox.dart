@@ -24,11 +24,10 @@ class WhiteBox extends StatelessWidget {
                 launchUrl(Uri.parse(
                     'https://drive.google.com/file/d/1J7gaNxbjnBbDn-vORJdY0-5Srd0ZhjGM/view?usp=sharing'));
               },
-              child: Container(
+              child: const SizedBox(
                 height: 90,
                 width: 90,
-                child: const Icon(Ionicons.document,
-                    color: Colors.black, size: 90.0),
+                child: Icon(Ionicons.document, color: Colors.black, size: 90.0),
               ),
             ),
           ),
@@ -50,26 +49,24 @@ class WhiteBox extends StatelessWidget {
           Positioned(
             top: 140,
             left: 0,
-            child: Container(
+            child: SizedBox(
               width: 800,
               height: 874,
-              child: Container(
-                child: SingleChildScrollView(
-                  child: Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          kLongText2,
-                          style: GoogleFonts.ubuntu(
-                              textStyle: const TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w400)),
-                        ),
-                      ],
-                    ),
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(30.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        kLongText2,
+                        style: GoogleFonts.ubuntu(
+                            textStyle: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 25,
+                                fontWeight: FontWeight.w400)),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -82,11 +79,10 @@ class WhiteBox extends StatelessWidget {
               onTap: () {
                 launchUrl(Uri.parse('https://back.nutcracker.lab.upg/#/'));
               },
-              child: Container(
+              child: const SizedBox(
                 height: 90,
                 width: 90,
-                child:
-                    const Icon(Ionicons.link, color: Colors.black, size: 90.0),
+                child: Icon(Ionicons.link, color: Colors.black, size: 90.0),
               ),
             ),
           ),
@@ -109,7 +105,7 @@ class WhiteBox extends StatelessWidget {
           Positioned(
             top: 1050,
             left: MediaQuery.of(context).size.width * 0.55,
-            child: Container(
+            child: SizedBox(
               width: 600,
               height: 500,
               child: Text(
@@ -138,7 +134,7 @@ class WhiteBox extends StatelessWidget {
           Positioned(
             top: 1600,
             left: 30,
-            child: Container(
+            child: SizedBox(
               width: 600,
               height: 500,
               child: Text(
@@ -149,36 +145,7 @@ class WhiteBox extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            top: 1900,
-            left: 30,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              child: HackerSpaces(),
-            ),
-          ),
         ],
-      ),
-    );
-  }
-}
-
-class HackerSpaces extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Positioned(
-      top: 10,
-      left: 10,
-      child: Container(
-        width: 600,
-        height: 500,
-        child: Text(
-          "Innovative projects at XYZ Corp",
-          style: GoogleFonts.ubuntu(
-            textStyle: const TextStyle(color: Colors.white, fontSize: 100),
-            fontWeight: FontWeight.w700,
-          ),
-        ),
       ),
     );
   }

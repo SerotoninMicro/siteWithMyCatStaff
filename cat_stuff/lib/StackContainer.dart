@@ -5,18 +5,18 @@ import 'package:ionicons/ionicons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class StackContainer extends StatelessWidget {
-  const StackContainer({super.key});
+  const StackContainer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
+      width: double.infinity,
+      height: double.infinity,
       child: Stack(
         children: [
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.05,
-            left: 42,
+            top: MediaQuery.of(context).size.height * 0.02,
+            left: MediaQuery.of(context).size.width * 0.02,
             child: Container(
               width: MediaQuery.of(context).size.width * 0.7,
               decoration: BoxDecoration(border: Border.all()),
@@ -24,100 +24,106 @@ class StackContainer extends StatelessWidget {
                 'Anastasia\n'
                 'Lebed',
                 style: GoogleFonts.ubuntu(
-                  textStyle:
-                      const TextStyle(color: Colors.white, fontSize: 100),
+                  textStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: MediaQuery.of(context).size.width * 0.04),
                   fontWeight: FontWeight.w700,
                 ),
               ),
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.width * 0.3,
-            left: MediaQuery.of(context).size.width * 0.4,
-            child: const SizedBox(
-              height: 900,
-              width: 900,
+            top: MediaQuery.of(context).size.height * -0.1,
+            left: MediaQuery.of(context).size.width * 0.5,
+            child: SizedBox(
+              height: MediaQuery.of(context).size.width * 0.7,
+              width: MediaQuery.of(context).size.width * 0.7,
               child: Image(image: AssetImage('lib/icons/cat.png')),
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.width * 0.5,
-            left: 40,
-            child: const SizedBox(
-              height: 90,
-              width: 90,
+            top: MediaQuery.of(context).size.height * 0.5,
+            left: MediaQuery.of(context).size.width * 0.02,
+            child: SizedBox(
+              height: MediaQuery.of(context).size.width * 0.06,
+              width: MediaQuery.of(context).size.width * 0.06,
               child: Image(image: AssetImage('lib/icons/pfp.png')),
             ),
           ),
           Positioned(
-            top: 30,
-            left: MediaQuery.of(context).size.width * 0.8,
+            top: MediaQuery.of(context).size.height * -0.07,
+            left: MediaQuery.of(context).size.width * 0.82,
             child: GestureDetector(
               onTap: () {
                 launchUrl(Uri.parse(
                     'https://github.com/SerotoninMicro/siteWithMyCatStaff'));
               },
-              child: const SizedBox(
-                height: 90,
-                width: 90,
+              child: SizedBox(
+                height: MediaQuery.of(context).size.width * 0.18,
+                width: MediaQuery.of(context).size.width * 0.18,
                 child: Icon(Ionicons.logo_github,
-                    color: Color(0xFFD48C5C), size: 90.0),
+                    color: Color(0xFFD48C5C),
+                    size: MediaQuery.of(context).size.width * 0.04),
               ),
             ),
           ),
           Positioned(
-            top: 30,
-            left: MediaQuery.of(context).size.width * 0.9,
+            top: MediaQuery.of(context).size.height * -0.07,
+            left: MediaQuery.of(context).size.width * 0.88,
             child: GestureDetector(
               onTap: () {
                 launchUrl(
                     Uri.parse('https://www.linkedin.com/in/anastasialebed/'));
               },
-              child: const SizedBox(
-                height: 90,
-                width: 90,
+              child: SizedBox(
+                height: MediaQuery.of(context).size.width * 0.18,
+                width: MediaQuery.of(context).size.width * 0.18,
                 child: Icon(Ionicons.logo_linkedin,
-                    color: Colors.white, size: 90.0),
+                    color: Colors.white,
+                    size: MediaQuery.of(context).size.width * 0.04),
               ),
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.25,
-            left: 350,
+            top: MediaQuery.of(context).size.height * 0.15,
+            left: MediaQuery.of(context).size.width * 0.15,
             child: SizedBox(
-              width: 250,
-              height: 874,
+              width: MediaQuery.of(context).size.width * 0.25,
+              height: MediaQuery.of(context).size.width * 0.8,
               child: Text(
                 'At this moment is: Flutter Developer,\n'
                 'looking for work.',
                 textAlign: TextAlign.justify,
                 style: GoogleFonts.ubuntu(
-                  textStyle:
-                      const TextStyle(color: Color(0xFFD48C5C), fontSize: 25),
+                  textStyle: TextStyle(
+                      color: Color(0xFFD48C5C),
+                      fontSize: MediaQuery.of(context).size.width * 0.01),
                   fontWeight: FontWeight.w400,
                 ),
               ),
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.45,
-            left: 42,
+            top: MediaQuery.of(context).size.height * 0.25,
+            left: MediaQuery.of(context).size.width * 0.02,
             child: SizedBox(
-              width: 1000,
-              height: 874,
+              width: MediaQuery.of(context).size.width * 0.55,
+              height: MediaQuery.of(context).size.width * 0.8,
               child: Text(
                 kLongText,
                 textAlign: TextAlign.justify,
                 style: GoogleFonts.ubuntu(
-                  textStyle: const TextStyle(color: Colors.white, fontSize: 25),
+                  textStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: MediaQuery.of(context).size.width * 0.01),
                 ),
               ),
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.width * 0.7,
+            top: MediaQuery.of(context).size.height * 0.7,
             left: 0,
-            child: const WhiteBox(),
+            child: WhiteBox(),
           ),
         ],
       ),
